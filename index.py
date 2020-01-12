@@ -32,8 +32,23 @@ try:
     bonus =  driver.find_element_by_id('claimbtn')
     bonus.click()
 except NoSuchElementException:
-    print("No bonus found ")
+    pass
 
-# Click the box
-box = driver.find_element_by_class_name('lootbox')
-box.click()
+#check if user still have more GEMS
+# and loop through all the GEMS
+count = 0
+
+lootbits = driver.find_element_by_id('lootbits')
+
+lootbits_number  = int(lootbits.text)
+
+while  lootbits_number > 0:
+    # Click the box
+    box = driver.find_element_by_class_name('lootbox')
+    box.click()
+    driver.get("https://lootbits.io/dashboard.php")
+    time.sleep(4)
+
+
+
+
