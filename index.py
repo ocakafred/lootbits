@@ -19,8 +19,8 @@ driver.get("https://lootbits.io/login.php")
 # Please enter your   credentails here
 # -----------------------------
 # 
-lootbits_username = 'jmsicarter4'
-lootbits_password = '.Cashmoney11.'
+lootbits_username = ''
+lootbits_password = ''
 
 # Getting username and password fields
 username = driver.find_element_by_name('username')
